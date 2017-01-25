@@ -1,7 +1,20 @@
 @import 'reset';
 
+:root {
+  --main-blue: #6fb4d3;
+  --main-yellow: #ffe059;
+  --main-red: #ff4242;
+  --main-green: #6e9c48;
+}
+
 body {
-  font-family: Roboto;
-  font-size: 3rem;
-  margin: 2rem;
+  font-family: Rubik;
+  font-size: 1.2rem;
+  background-image: url(../assets/img/main-bg.png);
+  background-size: 140%;
+}
+
+a {
+  font-family: Rubik;
+  text-transform: uppercase;
 }

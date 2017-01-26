@@ -5,16 +5,146 @@
   --main-yellow: #ffe059;
   --main-red: #ff4242;
   --main-green: #6e9c48;
+  --main-black: #202020;
 }
 
 body {
   font-family: Rubik;
-  font-size: 1.2rem;
+  color: var(--main-black);
+  font-size: 1.6rem;
   background-image: url(../assets/img/main-bg.png);
-  background-size: 140%;
+  background-repeat: repeat;
+  background-size: 5px 5px;
+  line-height: 1.8rem;
+  margin: 0 auto;
 }
 
-a {
-  font-family: Rubik;
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  transform: rotate(-1deg);
+  line-height: 2.1rem;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.nav-link:active {
+  background: linear-gradient(0deg, transparent 10px, var(--main-yellow) 0) 0 0 repeat;
+  background-position: left 2rem bottom 1rem;
+  padding-right: .5rem;
+}
+
+.content {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.main-nav {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav-links {
+  display: flex;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 1rem;
+  padding-right: .5rem;
+}
+
+.fold {
+  width: 100%;
+  height: 50vmin;
+  display: flex;
+  justify-content: center;
+  background-image: url(../assets/img/pattern.jpg);
+  mix-blend-mode: multiply;
+}
+
+.section-title {
+  transform: rotate(13deg);
+  background: linear-gradient(0deg, transparent 8px, var(--main-yellow) 0) 0 0 repeat;
+  background-position: left 1rem top .7rem;
+  padding: .5;
+}
+
+.content-wrap {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/img/cardboard.jpg);
+  /*clip-path: url(#clippy);*/
+}
+
+.about-content {
+  display: flex;
+  flex-flow: column nowrap;
+
+  & p {
+    margin-top: 3rem;
+    max-width: 50rem;
+  }
+}
+
+button {
+  max-width: 22rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   text-transform: uppercase;
+  padding: .8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 28px;
+  margin-top: 3rem;
+  background-color: white;
+  border: none;
+}
+
+.text-em-small {
+  font-weight: 500;
+}
+
+.about-image {
+  clip-path: circle(33%);
+}
+
+.highlight-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.highlights, .agenda, .about {
+  margin-top: 3rem;
+  height: 40rem;
+}
+
+.agenda, footer {
+  background-image: url(../assets/img/cardboard.jpg);
+}
+
+input {
+  padding: .8rem;
+  font-size: 1.6rem;
+  border-radius: 28px;
+  border: 1px solid black;
 }

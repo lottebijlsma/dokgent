@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script type="text/javascript">
       WebFontConfig = {
-        google: { families: ['Rubik'] }
+        google: { families: ['Rubik:400,500,700'] }
       };
 
       (function() {
@@ -22,14 +22,14 @@
   <body>
     <header>
       <div class='main-nav'>
-      <ul>
+        <img src='../assets/svg/doklogo.svg' alt="">
+      <ul class='main-nav-links'>
         <li><a class='nav-link' href="">Home</a></li>
         <li><a class='nav-link' href="">Programma</a></li>
         <li><a class='nav-link' href="">Informatie</a></li>
         <li><a class='nav-link' href="">Blog</a></li>
         <li><a class='nav-link' href="">&hearts;</a></li>
       </ul>
-      <img src='../assets/svg/doklogo.svg' alt="">
       </div>
     </header>
     <main>
@@ -45,5 +45,23 @@
 
       <?php echo $js;?>
     </main>
+    <footer>
+      <div class='content-wrap content'>
+        <div class='contact-info'>
+          <img src='./assets/svg/doklogo.svg' alt="">
+          <address class='contact'>
+            <p>Adres: Koopvaardijlaan 13</p>
+            <p>Telefoon: 09 224 19 40</p>
+          </address>
+        </div>
+        <div class='newsletter'>
+          <p>Abonneer je op onze nieuwsbrief</p>
+          <form class='newsletter' method="post">
+            <input type='email' name='email' placeholder='jakeweary@gmail.com'>
+            <input type='submit' name="" value='->'>
+          </form>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

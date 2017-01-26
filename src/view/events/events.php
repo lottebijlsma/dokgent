@@ -2,6 +2,8 @@
   <header>
     <h1><em class='section-title'>Wat kan je nog verwachten</em></h1>
   </header>
+  <div class='filter'>
+  </div>
   <div class='event'>
     <?php foreach($events as $event): ?>
       <article>

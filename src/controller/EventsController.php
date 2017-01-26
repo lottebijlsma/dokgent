@@ -12,7 +12,8 @@ class EventsController extends Controller {
   }
 
   public function index() {
-
+    $images = $this->eventDAO->highlights();
+    $this->set('images', $images);
   }
 
   public function events() {
@@ -97,6 +98,11 @@ class EventsController extends Controller {
     // );
 
     $events = $this->eventDAO->search($conditions);
+    $this->set('events', $events);
+  }
+
+  public function detail() {
+    $events = $this->eventDAO->selectById($_GET['id']);
     $this->set('events', $events);
   }
 

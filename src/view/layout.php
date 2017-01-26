@@ -24,8 +24,12 @@
       <div class='main-nav'>
         <img src='../assets/svg/doklogo.svg' alt="">
       <ul class='main-nav-links'>
-        <li><a class='nav-link' href="/">Home</a></li>
-        <li><a class='nav-link' href="?page=events">Programma</a></li>
+        <li><a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
+          echo 'nav-link-active';
+        }?>' href="/">Home</a></li>
+        <li><a class='nav-link <?php if($_GET['page'] === 'events') {
+          echo 'nav-link-active';
+        }?>' href="?page=events">Programma</a></li>
         <li><a class='nav-link' href="">Informatie</a></li>
         <li><a class='nav-link' href="">Blog</a></li>
         <li><a class='nav-link' href="">&hearts;</a></li>

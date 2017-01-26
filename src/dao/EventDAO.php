@@ -3,6 +3,10 @@ require_once __DIR__ . '/DAO.php';
 class EventDAO extends DAO {
 
   public function highlights() {
+    $sql = "SELECT * FROM `ma3_dok_events` WHERE `highlight` = 1 ORDER BY `start` DESC LIMIT 4";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function search($conditions = array()) {

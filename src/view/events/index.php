@@ -29,9 +29,12 @@
     <header>
       <h1><em class='section-title'>Evenementen in de kijker</em></h1>
     </header>
-    <a href='#'>Bekijk alle evenementen</a>
+    <a href='?page=events'>Bekijk alle evenementen</a>
   </div>
   <div class='events'>
+    <?php foreach ($images as $image): ?>
+      <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+    <?php endforeach; ?>
   <!-- Vier evenementen uit de database die tag hebben: in de kijker -->
   </div>
 </section>

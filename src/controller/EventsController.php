@@ -20,6 +20,9 @@ class EventsController extends Controller {
     $images = $this->eventDAO->highlights();
     $this->set('images', $images);
 
+    $tags = $this->eventDAO->tags();
+    $this->set('tags', $tags);
+
     $conditions = array();
 
     //example: search on title
@@ -60,11 +63,14 @@ class EventsController extends Controller {
     // );
 
     //example: search on tag name
-    // $conditions[0] = array(
-    //   'field' => 'tag',
-    //   'comparator' => '=',
-    //   'value' => 'gastvrijheid'
-    // );
+    if (isset($_POST['tag'])) {
+      $conditions[0] = array(
+        'field' => 'tag',
+        'comparator' => '=',
+        'value' => $_POST['tag']
+      );
+    }
+
 
     //example: events ending in may 2017
     // $conditions[0] = array(

@@ -280,3 +280,25 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+
+.styled-select select {
+  background-color: white;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  font-family: Rubik;
+  color: var(--main-black);
+  padding: .5rem;
+  border: 0;
+  height: 3.5rem;
+  margin-top: 0;
+}
+
+.zoeken {
+  margin-top: 5rem;
+}
+
+h4 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}

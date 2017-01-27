@@ -1,7 +1,336 @@
 @import 'reset';
 
+:root {
+  --main-blue: #6fb4d3;
+  --main-yellow: #ffe059;
+  --main-red: #ff4242;
+  --main-green: #6e9c48;
+  --main-black: #202020;
+}
+
 body {
-  font-family: Roboto;
-  font-size: 3rem;
-  margin: 2rem;
+  font-family: Rubik;
+  color: var(--main-black);
+  font-size: 1.6rem;
+  background-image: url(../assets/img/main-bg.png);
+  background-repeat: repeat;
+  background-size: 5px 5px;
+  line-height: 1.8rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  transform: rotate(-1deg);
+  line-height: 2.1rem;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.nav-link-active {
+  background: linear-gradient(0deg, transparent 10px, var(--main-yellow) 0) 0 0 repeat;
+  background-position: left 2rem bottom 1rem;
+  padding-right: .5rem;
+}
+
+.content {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.main-nav {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav-links {
+  display: flex;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 1rem;
+  padding-right: .5rem;
+}
+
+.fold {
+  width: 100%;
+  height: 50vmin;
+  display: flex;
+  justify-content: center;
+  background-image: url(../assets/svg/patroon.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 40%;
+  mix-blend-mode: multiply;
+}
+
+.section-title {
+  transform: rotate(13deg);
+  background-image: linear-gradient(0deg, transparent 8px, var(--main-yellow) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5;
+}
+
+.content-wrap {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/img/try2.png);
+  background-size: 100% 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-flow: column nowrap;
+
+  & p {
+    margin-top: 3rem;
+    max-width: 50rem;
+  }
+}
+
+button {
+  max-width: 20rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: .8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 28px;
+  margin-top: 3rem;
+  background-color: white;
+  border: none;
+}
+
+.text-em-small {
+  font-weight: 500;
+}
+
+.about-image {
+  clip-path: circle(33%);
+}
+
+.highlight-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.highlights, .agenda {
+  margin-top: 3rem;
+  height: 40rem;
+}
+
+footer {
+  background-image: url(../assets/img/cardboard.jpg);
+}
+
+.agenda {
+  background-image: url(../assets/img/try2.png);
+}
+
+input {
+  padding: .8rem;
+  font-size: 1.6rem;
+  border-radius: 28px;
+  border: 1px solid black;
+}
+
+.event {
+  width: 65vmax;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  padding-left: 3rem;
+  flex-flow: row wrap;
+}
+
+h2 {
+  line-height: 2.5rem;
+  max-width: 20rem;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 3;
+}
+
+.event-title {
+  background-image: linear-gradient(0deg, transparent 7px, var(--main-blue) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5rem;
+  mix-blend-mode: hard-light;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  display: flex;
+  align-self: flex-end;
+}
+
+article {
+  padding: 1rem;
+}
+
+.tag {
+  background-color: var(--main-black);
+  font-size: 1.3rem;
+  padding: .5rem;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  margin-top: -7rem;
+  margin-left: -.5rem;
+}
+
+.event-image {
+  object-fit: cover;
+  height: 17.5rem;
+  border-radius: 2.8rem;
+}
+
+.event-detail-image {
+  height: 40rem;
+  object-fit: cover;
+  object-position: 0 0;
+  border-image-source: url(../assets/img/border.png);
+  border-image-slice: 25;
+  border-image-repeat: repeat;
+
+  border-width: 1.3rem;
+  border-style: solid;
+}
+
+.event-detail-about {
+  margin-left: 2rem;
+}
+
+.desc-about {
+  background-image: url(../assets/img/cardboard.jpg);
+  padding: 2rem;
+  border-radius: 2.8rem;
+  max-width: 35vmax;
+  padding-left: 3rem;
+}
+
+.desc-specs {
+  margin-top: 2rem;
+  background-color: var(--main-yellow);
+  border-radius: 2.8rem;
+  text-align: center;
+}
+
+.event-content {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+dl {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+}
+
+dt {
+  font-weight: 500;
+}
+
+dd {
+  padding-left: .5rem;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.event-highlight {
+  font-weight: 500;
+  background-image: linear-gradient(0deg, transparent 8px, var(--main-blue) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5;
+  mix-blend-mode: hard-light;
+}
+
+.highlight-image {
+  margin-top: 3rem;
+  width: 19vmax;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 2.8rem;
+  margin-left: 1.5rem;
+}
+
+.filter {
+  background-image: url(../assets/img/cardboard.jpg);
+  width: 30rem;
+  height: 25rem;
+  border-radius: 2.8rem;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.events-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.styled-select select {
+  background-color: white;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  font-family: Rubik;
+  color: var(--main-black);
+  padding: .5rem;
+  border: 0;
+  height: 3.5rem;
+  margin-top: 0;
+}
+
+.zoeken {
+  margin-top: 5rem;
+}
+
+h4 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.highlight-events {
+  display: flex;
+}
+
+.event-highlight-title {
+  background-image: linear-gradient(0deg, transparent 7px, var(--main-red) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5rem;
+  mix-blend-mode: hard-light;
+  margin-top: 5rem;
+  margin-left: 2.5rem;
 }

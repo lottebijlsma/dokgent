@@ -17,15 +17,17 @@ class EventsController extends Controller {
   }
 
   public function events() {
+    $images = $this->eventDAO->highlights();
+    $this->set('images', $images);
+
     $conditions = array();
 
     //example: search on title
-    // $conditions[0] = array(
-    //   'field' => 'title',
-    //   'comparator' => 'like',
-    //   'value' => 'schoen'
-    // );
-
+      $conditions[0] = array(
+        'field' => 'title',
+        'comparator' => 'like',
+        'value' => 'taart'
+      );
     //example: search on location_id
     // $conditions[0] = array(
     //   'field' => 'location_id',

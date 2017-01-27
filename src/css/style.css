@@ -93,7 +93,6 @@ a:visited {
   display: flex;
   align-items: center;
   background-image: url(../assets/img/cardboard.jpg);
-  /*clip-path: url(#clippy);*/
 }
 
 .about-content {

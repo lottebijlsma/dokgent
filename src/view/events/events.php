@@ -1,8 +1,22 @@
+<section class='highlights content'>
+  <div class='highlight-header'>
+    <header>
+      <h1><em class='section-title'>Evenementen in de kijker</em></h1>
+    </header>
+  </div>
+  <div class='events'>
+    <?php foreach ($images as $image): ?>
+      <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+    <?php endforeach; ?>
+  </div>
+</section>
+
 <section class='events content'>
   <header>
     <h1><em class='section-title'>Wat kan je nog verwachten</em></h1>
   </header>
   <div class='filter'>
+
   </div>
   <div class='event'>
     <?php foreach($events as $event): ?>

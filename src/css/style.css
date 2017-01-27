@@ -148,8 +148,11 @@ input {
 }
 
 .event {
-  margin-top: 3rem;
+  width: 65vmax;
   display: flex;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  padding-left: 3rem;
   flex-flow: row wrap;
 }
 
@@ -262,4 +265,18 @@ h3 {
   object-fit: cover;
   border-radius: 2.8rem;
   margin-left: 1.5rem;
+}
+
+.filter {
+  background-image: url(../assets/img/cardboard.jpg);
+  width: 30rem;
+  height: 25rem;
+  border-radius: 2.8rem;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.events-content {
+  display: flex;
+  justify-content: space-between;
 }

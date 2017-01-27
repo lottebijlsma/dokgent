@@ -23,11 +23,14 @@ class EventsController extends Controller {
     $conditions = array();
 
     //example: search on title
+    if (isset($_POST['query'])) {
       $conditions[0] = array(
         'field' => 'title',
         'comparator' => 'like',
-        'value' => 'taart'
+        'value' => $_POST['query']
       );
+    }
+
     //example: search on location_id
     // $conditions[0] = array(
     //   'field' => 'location_id',

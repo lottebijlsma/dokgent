@@ -13,7 +13,9 @@
         <div class='desc-specs'>
           <dl>
             <dt>Datum:</dt>
-            <dd> <?php echo($events['start']);?> - <?php echo($events['end']);?></dd>
+            <dd> <?php $dt = new DateTime($events['start']);  $date = $dt->format('d M'); echo $date; ?> - <?php $dt = new DateTime($events['end']);  $date = $dt->format('d M'); echo $date; ?></dd>
+
+
             <!-- <dt>Locatie</dt><dd><?php echo($events['location']);?></dd> -->
           </dl>
         </div>

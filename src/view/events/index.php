@@ -23,9 +23,12 @@
     </header>
     <a href='?page=events'>Bekijk alle evenementen</a>
   </div>
-  <div class='events'>
+  <div class='highlight-events'>
     <?php foreach ($images as $image): ?>
-      <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+      <a href='index.php?page=detail&amp;id=<?php echo($image['id']); ?>'>
+        <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
+        <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+      </a>
     <?php endforeach; ?>
   </div>
 </section>

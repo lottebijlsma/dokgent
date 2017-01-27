@@ -70,7 +70,10 @@ a:visited {
   height: 50vmin;
   display: flex;
   justify-content: center;
-  background-image: url(../assets/img/pattern.jpg);
+  background-image: url(../assets/svg/patroon.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 40%;
   mix-blend-mode: multiply;
 }
 
@@ -90,9 +93,11 @@ a:visited {
 }
 
 .about {
+  padding: 4rem;
   display: flex;
   align-items: center;
-  background-image: url(../assets/img/cardboard.jpg);
+  background-image: url(../assets/img/try2.png);
+  background-size: 100% 100%;
 }
 
 .about-content {
@@ -131,13 +136,17 @@ button {
   justify-content: space-between;
 }
 
-.highlights, .agenda, .about {
+.highlights, .agenda {
   margin-top: 3rem;
   height: 40rem;
 }
 
-.agenda, footer {
+footer {
   background-image: url(../assets/img/cardboard.jpg);
+}
+
+.agenda {
+  background-image: url(../assets/img/try2.png);
 }
 
 input {
@@ -169,10 +178,12 @@ h2 {
 .event-title {
   background-image: linear-gradient(0deg, transparent 7px, var(--main-blue) 0);
   background-position: left 1rem top .7rem;
-  padding: .5;
+  padding: .5rem;
   mix-blend-mode: hard-light;
   margin-top: 3rem;
   margin-left: 1rem;
+  display: flex;
+  align-self: flex-end;
 }
 
 article {
@@ -197,7 +208,9 @@ article {
 }
 
 .event-detail-image {
-  height: 100%;
+  height: 40rem;
+  object-fit: cover;
+  object-position: 0 0;
   border-image-source: url(../assets/img/border.png);
   border-image-slice: 25;
   border-image-repeat: repeat;
@@ -233,6 +246,7 @@ article {
 
 dl {
   display: flex;
+  flex-flow: column nowrap;
   padding: 2rem;
 }
 
@@ -242,6 +256,11 @@ dt {
 
 dd {
   padding-left: .5rem;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
 }
 
 h3 {
@@ -301,4 +320,17 @@ h4 {
   text-decoration: underline;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+}
+
+.highlight-events {
+  display: flex;
+}
+
+.event-highlight-title {
+  background-image: linear-gradient(0deg, transparent 7px, var(--main-red) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5rem;
+  mix-blend-mode: hard-light;
+  margin-top: 5rem;
+  margin-left: 2.5rem;
 }

@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
     <script type="text/javascript">
       WebFontConfig = {
         google: { families: ['Rubik:400,500,700'] }
@@ -22,7 +24,7 @@
   <body>
     <header>
       <div class='main-nav'>
-        <img src='../assets/svg/doklogo.svg' alt="">
+        <a href="/"><img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100"></a>
       <ul class='main-nav-links'>
         <li><a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
           echo 'nav-link-active';
@@ -52,7 +54,7 @@
     <footer>
       <div class='content-wrap content'>
         <div class='contact-info'>
-          <img src='./assets/svg/doklogo.svg' alt="">
+          <img src='./assets/img/doklogo.png' alt="logo van DOKGent" width="100">
           <address class='contact'>
             <p>Adres: Koopvaardijlaan 13</p>
             <p>Telefoon: 09 224 19 40</p>

@@ -27,7 +27,6 @@
     <div class='event'>
       <?php foreach($events as $event): ?>
         <article>
-          <header></header>
           <a href='index.php?page=detail&amp;id=<?php echo($event['id']); ?>'>
             <h2 class='event-title'><?php echo $event['title']; ?></h2>
             <img class='event-image' src="./assets/img/database/<?php echo($event['img']); ?>" alt='foto van het evenement' width="270"/>

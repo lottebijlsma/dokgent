@@ -143,6 +143,7 @@ button {
 
 footer {
   background-image: url(../assets/img/cardboard.jpg);
+  margin-top: 3rem;
 }
 
 .agenda {
@@ -227,8 +228,9 @@ article {
   background-image: url(../assets/img/cardboard.jpg);
   padding: 2rem;
   border-radius: 2.8rem;
-  max-width: 35vmax;
+  width: 35vmax;
   padding-left: 3rem;
+  order: 1;
 }
 
 .desc-specs {
@@ -236,6 +238,7 @@ article {
   background-color: var(--main-yellow);
   border-radius: 2.8rem;
   text-align: center;
+  order: 2;
 }
 
 .event-content {
@@ -333,4 +336,47 @@ h4 {
   mix-blend-mode: hard-light;
   margin-top: 5rem;
   margin-left: 2.5rem;
+}
+
+@media (width <= 1180px) {
+
+  .event-detail-about {
+    margin-left: 0;
+  }
+
+  .event-content {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .event-detail-image {
+    width: 80vw;
+    height: 50rem;
+    align-self: center;
+  }
+
+  .desc-about, .desc-specs {
+    width: 80vw;
+    margin-top: 3rem;
+    align-self: center;
+  }
+
+  .desc-specs {
+    order: -4;
+  }
+
+  .mobile-position-change {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+  }
+}
+
+@media (width <= 768px) {
+
+  .event-detail-image {
+    width: 80vw;
+    height: 30rem;
+    align-self: center;
+  }
 }

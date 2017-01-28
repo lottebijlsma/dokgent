@@ -282,7 +282,7 @@ h3 {
 
 .highlight-image {
   margin-top: 3rem;
-  width: 19vmax;
+  width: 19vw;
   height: 35rem;
   object-fit: cover;
   border-radius: 2.8rem;
@@ -327,6 +327,7 @@ h4 {
 
 .highlight-events {
   display: flex;
+  justify-content: center;
 }
 
 .event-highlight-title {
@@ -369,6 +370,14 @@ h4 {
     display: flex;
     flex-flow: column nowrap;
     align-self: center;
+  }
+
+  .highlight-image {
+    height: 20rem;
+  }
+
+  .highlights {
+    height: 25rem;
   }
 }
 

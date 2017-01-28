@@ -1,3 +1,19 @@
+<section class='highlights content'>
+  <div class='highlight-header'>
+    <header>
+      <h1><em class='section-title'>Evenementen in de kijker</em></h1>
+    </header>
+    <a href='?page=events'>Bekijk alle evenementen</a>
+  </div>
+  <div class='highlight-events'>
+    <?php foreach ($images as $image): ?>
+      <a href='index.php?page=detail&amp;id=<?php echo($image['id']); ?>'>
+        <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
+        <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+      </a>
+    <?php endforeach; ?>
+  </div>
+</section>
 <section class='events content'>
   <header>
     <h1><em class='section-title'>Wat kan je nog verwachten</em></h1>
@@ -43,17 +59,5 @@
         </article>
       <? endforeach;?>
     </div>
-  </div>
-</section>
-<section class='highlights content'>
-  <div class='highlight-header'>
-    <header>
-      <h1><em class='section-title'>Evenementen in de kijker</em></h1>
-    </header>
-  </div>
-  <div class='events'>
-    <?php foreach ($images as $image): ?>
-      <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
-    <?php endforeach; ?>
   </div>
 </section>

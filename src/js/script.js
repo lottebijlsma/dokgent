@@ -1,5 +1,4 @@
 (() => {
-  const $form = document.forms[0];
 
   // const fetchDate = () => {
   //   fetch(`index.php?t=${Date.now()}`, {
@@ -8,9 +7,14 @@
   //     })
   //   })
   //   .then(r => r.json())
-  //   .then(res => console.log(res[0].start))
+  //   .then(res => {
+  //     console.log(res);
+  //   })
   //   .catch(e => console.error(e));
   // };
+
+
+  const $form = document.forms[0];
 
   const onSubmit = e => {
     console.log(`onSubmit`);
@@ -60,7 +64,6 @@
 
   const init = () => {
     // fetchDate();
-
     $form.noValidate = true;
     $form.addEventListener(`submit`, onSubmit);
     document.getElementById(`email`).addEventListener(`blur`, onEmailChange);

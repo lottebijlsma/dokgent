@@ -26,18 +26,26 @@
     <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
     <header>
       <div class='main-nav'>
-        <a href="/"><img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100"></a>
-      <ul class='main-nav-links'>
-        <li><a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
-          echo 'nav-link-active';
-        }?>' href="/">Home</a></li>
-        <li><a class='nav-link <?php if($_GET['page'] === 'events') {
-          echo 'nav-link-active';
-        }?>' href="?page=events">Programma</a></li>
-        <li><a class='nav-link' href="">Informatie</a></li>
-        <li><a class='nav-link' href="">Blog</a></li>
-        <li><a class='nav-link' href="">&hearts;</a></li>
-      </ul>
+        <a href="/">
+          <img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100">
+        </a>
+        <nav>
+          <ul id='main-nav-links' class='main-nav-links'>
+            <li>
+              <a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
+              echo 'nav-link-active';}?>' href="/">Home</a>
+            </li>
+            <li>
+              <a class='nav-link <?php if($_GET['page'] === 'events') {echo 'nav-link-active';}?>' href="?page=events">Programma</a>
+            </li>
+            <li>
+              <a class='nav-link' href="">Informatie</a>
+            </li>
+            <li>
+              <a class='nav-link' href="">Blog</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
@@ -47,7 +55,6 @@
       <div class='container'>
         <?php echo $content; ?>
       </div>
-      <?php echo $js;?>
     </main>
     <footer>
       <div class='content-wrap content'>
@@ -63,5 +70,6 @@
         </div> -->
       </div>
     </footer>
+    <?php echo $js;?>
   </body>
 </html>

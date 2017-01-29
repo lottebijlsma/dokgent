@@ -343,6 +343,11 @@ h3 {
   border: 0;
 }
 
+.newsletter-input {
+  background-color: var(--main-yellow);
+  border: 0;
+}
+
 .submit-btn {
   border: 0;
   margin-top: 3rem;
@@ -443,12 +448,6 @@ h4 {
     order: -4;
   }
 
-  .mobile-position-change {
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: center;
-  }
-
   .highlight-image {
     height: 20rem;
   }
@@ -539,7 +538,36 @@ h4 {
   }
 }
 
+@media (width <= 690px) {
+
+  .all-events {
+    visibility: hidden;
+  }
+
+  .highlight-image {
+    width: 50vw;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .highlight-events {
+    flex-flow: row wrap;
+    padding: 0;
+  }
+
+  .highlights {
+    width: 100vw;
+    height: 45rem;
+  }
+}
+
 @media (width <= 414px) {
+
+  .main-nav-links {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 
   .desc-about, .desc-specs {
     margin-top: 1.5rem;

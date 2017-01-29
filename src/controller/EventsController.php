@@ -15,6 +15,19 @@ class EventsController extends Controller {
     $images = $this->eventDAO->highlights();
     $this->set('images', $images);
 
+    $items = $this->eventDAO->selectAll();
+    if($this->isAjax) {
+      header('Content-Type: application/json');
+      echo json_encode($items);
+      exit();
+    }
+    $this->set('items', $items);
+    // als de param t niet leeg is, deze if binnengaan
+    // hier checken op $this->isAjax()
+    // content-type als app/json returnen
+    // zorgen dat je enkel de events ophaalt die voldoen aan de param t in $GET
+    // json_encode($images)
+
     if(!empty($_POST)) $this->handleRegistration();
   }
 
@@ -29,16 +42,16 @@ class EventsController extends Controller {
 
 
     // example: events ending in may 2017
-      $conditions[0] = array(
-        'field' => 'end',
-        'comparator' => '>=',
-        'value' => '2017-05-01 00:00:00'
-      );
-      $conditions[1] = array(
-        'field' => 'end',
-        'comparator' => '<',
-        'value' => '2017-06-01 00:00:00'
-      );
+    $conditions[0] = array(
+      'field' => 'end',
+      'comparator' => '>=',
+      'value' => '2017-05-01 00:00:00'
+    );
+    $conditions[1] = array(
+      'field' => 'end',
+      'comparator' => '<',
+      'value' => '2017-06-01 00:00:00'
+    );
 
     if (isset($_POST['juni'])) {
       $conditions[0] = array(

@@ -1,11 +1,17 @@
-<section class='event-detail content'>
-  <header>
+<section class='event-detail'>
+  <header class='content'>
+    <p class='breadcrumbs'>
+      <a href='?page=events'>agenda</a> &#10140;
+      <a href='index.php?page=detail&amp;id=<?php echo($events['id']); ?>'>
+        <?php echo($events['title']);?>
+      </a>
+    </p>
     <h1><em class='section-title'><?php echo($events['title']);?></em></h1>
   </header>
   <div class='event-content'>
     <img class="event-detail-image" src="../assets/img/database/<?php echo($events['img']);?>" alt="afbeelding van evenement" width="600"/>
     <div class='event-detail-about'>
-      <div>
+      <div class='mobile-position-change'>
         <div class='desc-about'>
           <h3><?php echo($events['title']);?></h3>
           <p><?php echo($events['description']);?></p>

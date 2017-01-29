@@ -22,6 +22,8 @@
     <?php echo $css;?>
   </head>
   <body>
+    <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
+    <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
     <header>
       <div class='main-nav'>
         <a href="/"><img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100"></a>
@@ -42,13 +44,9 @@
       <div class='fold'>
         <img src='../assets/svg/dok17.svg' alt="">
       </div>
-      <div class="container">
-        <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
-        <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
-
+      <div class='container'>
         <?php echo $content; ?>
       </div>
-
       <?php echo $js;?>
     </main>
     <footer>
@@ -60,13 +58,9 @@
             <p>Telefoon: 09 224 19 40</p>
           </address>
         </div>
-        <div class='newsletter'>
-          <p>Abonneer je op onze nieuwsbrief</p>
-          <form class='newsletter' method="post">
-            <input type='email' name='email' placeholder='jakeweary@gmail.com'>
-            <input type='submit' name="" value='->'>
-          </form>
-        </div>
+        <!-- <div class="social-media">
+
+        </div> -->
       </div>
     </footer>
   </body>

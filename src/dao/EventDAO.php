@@ -9,6 +9,13 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectAll() {
+    $sql = "SELECT * FROM `ma3_dok_events`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   public function tags() {
     $sql = "SELECT * FROM `ma3_dok_tags`";
     $stmt = $this->pdo->prepare($sql);
@@ -148,6 +155,28 @@ class EventDAO extends DAO {
       $tagsByEventId[$row['event_id']][] = $row;
     }
     return $tagsByEventId;
+  }
+
+  public function insert($data){
+    $errors = $this->validateRegistrationData($data);
+    if(!empty($errors)) return false;
+
+    $sql = "INSERT INTO `ma3_dok_newsletter` (`email`)
+    VALUES(:email)";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':email', $data['email']);
+
+    return $stmt->execute();
+  }
+
+  public function validateRegistrationData($data){
+    $errors = [];
+
+    if(!isset($data["email"]) || empty($data["email"])){
+      $errors[] = "Vul aub een geldig e-mail adres in";
+    }
+    return $errors;
   }
 
 }

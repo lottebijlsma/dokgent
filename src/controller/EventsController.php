@@ -14,6 +14,21 @@ class EventsController extends Controller {
   public function index() {
     $images = $this->eventDAO->highlights();
     $this->set('images', $images);
+
+    $items = $this->eventDAO->selectAll();
+    if($this->isAjax) {
+      header('Content-Type: application/json');
+      echo json_encode($items);
+      exit();
+    }
+    $this->set('items', $items);
+    // als de param t niet leeg is, deze if binnengaan
+    // hier checken op $this->isAjax()
+    // content-type als app/json returnen
+    // zorgen dat je enkel de events ophaalt die voldoen aan de param t in $GET
+    // json_encode($images)
+
+    if(!empty($_POST)) $this->handleRegistration();
   }
 
   public function events() {
@@ -25,6 +40,71 @@ class EventsController extends Controller {
 
     $conditions = array();
 
+
+    // example: events ending in may 2017
+    $conditions[0] = array(
+      'field' => 'end',
+      'comparator' => '>=',
+      'value' => '2017-05-01 00:00:00'
+    );
+    $conditions[1] = array(
+      'field' => 'end',
+      'comparator' => '<',
+      'value' => '2017-06-01 00:00:00'
+    );
+
+    if (isset($_POST['juni'])) {
+      $conditions[0] = array(
+        'field' => 'end',
+        'comparator' => '>=',
+        'value' => '2017-06-01 00:00:00'
+      );
+      $conditions[1] = array(
+        'field' => 'end',
+        'comparator' => '<',
+        'value' => '2017-07-01 00:00:00'
+      );
+    }
+
+    if (isset($_POST['juli'])) {
+      $conditions[0] = array(
+        'field' => 'end',
+        'comparator' => '>=',
+        'value' => '2017-07-01 00:00:00'
+      );
+      $conditions[1] = array(
+        'field' => 'end',
+        'comparator' => '<',
+        'value' => '2017-08-01 00:00:00'
+      );
+    }
+
+    if (isset($_POST['augustus'])) {
+      $conditions[0] = array(
+        'field' => 'end',
+        'comparator' => '>=',
+        'value' => '2017-08-01 00:00:00'
+      );
+      $conditions[1] = array(
+        'field' => 'end',
+        'comparator' => '<',
+        'value' => '2017-09-01 00:00:00'
+      );
+    }
+
+    if (isset($_POST['september'])) {
+      $conditions[0] = array(
+        'field' => 'end',
+        'comparator' => '>=',
+        'value' => '2017-09-01 00:00:00'
+      );
+      $conditions[1] = array(
+        'field' => 'end',
+        'comparator' => '<',
+        'value' => '2017-10-01 00:00:00'
+      );
+    }
+
     //example: search on title
     if (isset($_POST['query'])) {
       $conditions[0] = array(
@@ -33,34 +113,6 @@ class EventsController extends Controller {
         'value' => $_POST['query']
       );
     }
-
-    //example: search on location_id
-    // $conditions[0] = array(
-    //   'field' => 'location_id',
-    //   'comparator' => '=',
-    //   'value' => 4
-    // );
-
-    //example: search on location name
-    // $conditions[0] = array(
-    //   'field' => 'location',
-    //   'comparator' => 'like',
-    //   'value' => 'strand'
-    // );
-
-    //example: search on organiser id
-    // $conditions[0] = array(
-    //   'field' => 'organiser_id',
-    //   'comparator' => '=',
-    //   'value' => '1'
-    // );
-
-    //example: search on organiser id
-    // $conditions[0] = array(
-    //   'field' => 'organiser',
-    //   'comparator' => 'LIKE',
-    //   'value' => 'gent'
-    // );
 
     //example: search on tag name
     if (isset($_POST['tag'])) {
@@ -71,43 +123,6 @@ class EventsController extends Controller {
       );
     }
 
-
-    //example: events ending in may 2017
-    // $conditions[0] = array(
-    //   'field' => 'end',
-    //   'comparator' => '>=',
-    //   'value' => '2017-05-01 00:00:00'
-    // );
-    // $conditions[1] = array(
-    //   'field' => 'end',
-    //   'comparator' => '<',
-    //   'value' => '2017-06-01 00:00:00'
-    // );
-
-    //example: events happening on march first
-    // $conditions[0] = array(
-    //   'field' => 'start',
-    //   'comparator' => '<=',
-    //   'value' => '2017-03-01 00:00:00'
-    // );
-    // $conditions[1] = array(
-    //   'field' => 'end',
-    //   'comparator' => '>=',
-    //   'value' => '2017-03-01 00:00:00'
-    // );
-
-    //example: search on location, with certain end date + time
-    // $conditions[0] = array(
-    //   'field' => 'location',
-    //   'comparator' => 'like',
-    //   'value' => 'voortuin'
-    // );
-    // $conditions[1] = array(
-    //   'field' => 'end',
-    //   'comparator' => '=',
-    //   'value' => '2017-05-01 19:00'
-    // );
-
     $events = $this->eventDAO->search($conditions);
     $this->set('events', $events);
   }
@@ -115,6 +130,17 @@ class EventsController extends Controller {
   public function detail() {
     $events = $this->eventDAO->selectById($_GET['id']);
     $this->set('events', $events);
+  }
+
+  private function handleRegistration(){
+    if($this->eventDAO->insert($_POST)) {
+      // $_SESSION['info'] = 'Registratie was succesvol';
+      $this->redirect('index.php');
+    } else {
+      $errors = $this->eventDAO->validateRegistrationData($_POST);
+      $_SESSION["error"] = $errors;
+      $this->redirect('index.php');
+    }
   }
 
 }

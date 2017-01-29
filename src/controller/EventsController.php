@@ -14,6 +14,8 @@ class EventsController extends Controller {
   public function index() {
     $images = $this->eventDAO->highlights();
     $this->set('images', $images);
+
+    if(!empty($_POST)) $this->handleRegistration();
   }
 
   public function events() {
@@ -115,6 +117,17 @@ class EventsController extends Controller {
   public function detail() {
     $events = $this->eventDAO->selectById($_GET['id']);
     $this->set('events', $events);
+  }
+
+  private function handleRegistration(){
+    if($this->eventDAO->insert($_POST)) {
+      // $_SESSION['info'] = 'Registratie was succesvol';
+      $this->redirect('index.php');
+    } else {
+      $errors = $this->eventDAO->validateRegistrationData($_POST);
+      $_SESSION["error"] = $errors;
+      $this->redirect('index.php');
+    }
   }
 
 }

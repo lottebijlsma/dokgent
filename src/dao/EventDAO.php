@@ -150,4 +150,26 @@ class EventDAO extends DAO {
     return $tagsByEventId;
   }
 
+  public function insert($data){
+    $errors = $this->validateRegistrationData($data);
+    if(!empty($errors)) return false;
+
+    $sql = "INSERT INTO `ma3_dok_newsletter` (`email`)
+    VALUES(:email)";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':email', $data['email']);
+
+    return $stmt->execute();
+  }
+
+  public function validateRegistrationData($data){
+    $errors = [];
+
+    if(!isset($data["email"]) || empty($data["email"])){
+      $errors[] = "Vul aub een geldig e-mail adres in";
+    }
+    return $errors;
+  }
+
 }

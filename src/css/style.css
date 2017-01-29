@@ -40,6 +40,10 @@ h1 {
   line-height: 2.1rem;
 }
 
+.error {
+  color: var(--main-red);
+}
+
 a:link,
 a:hover,
 a:active,
@@ -225,11 +229,11 @@ h2 {
   background-color: var(--main-black);
   font-size: 1.3rem;
   padding: .5rem;
+  margin-left: 1rem;
   color: white;
   position: absolute;
   z-index: 3;
   margin-top: -5rem;
-  margin-left: 1rem;
 }
 
 .event-image {
@@ -335,6 +339,17 @@ h3 {
   margin-top: 3rem;
 }
 
+.main-input {
+  border: 0;
+}
+
+.submit-btn {
+  border: 0;
+  margin-top: 3rem;
+  background-color: var(--main-green);
+  padding: 1rem 2rem;
+}
+
 .events-content {
   display: flex;
   justify-content: space-between;
@@ -350,10 +365,6 @@ h3 {
   border: 0;
   height: 3.5rem;
   margin-top: 0;
-}
-
-.zoeken {
-  margin-top: 5rem;
 }
 
 h4 {
@@ -504,7 +515,7 @@ h4 {
   }
 
   .event-image {
-    width: 28.3rem;
+    width: 35vw;
   }
 
   .event {

@@ -41,19 +41,19 @@
             <label for="">september</label>
           </div>
         </div>
-        <h4>Zoek op titel</h3>
-        <input type="text" id="search" name="query" placeholder="Zoek op titel" value="">
+        <h4>Zoek op titel</h4>
+        <input class='main-input' type="text" id="search" name="query" placeholder="Zoek op titel" value="">
         <input type="hidden" name="page" value="search">
-        <h4>Zoek op tags</h3>
+        <h4>Zoek op tags</h4>
         <div class='styled-select'>
-          <select class='tag' name='tag' id='tag' placeholder=" een tag">
+          <select name='tag' id='tag' placeholder=" een tag">
             <option value"" disabled selected>Kies een tag</option>
             <?php foreach ($tags as $tag): ?>
               <option><?php echo($tag['tag']); ?></option>
             <?php endforeach; ?>
           </select>
         </div>
-        <input class='zoeken' type="submit" name="action" value="zoek">
+        <input class='submit-btn' type="submit" name="action" value="zoek">
       </form>
     </div>
     <div class='event'>

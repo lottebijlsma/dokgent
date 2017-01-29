@@ -18,25 +18,12 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
-
-    <!-- <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: ['Rubik:400,500,700'] }
-      };
-
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-    </script> -->
     <title>DOK</title>
     <?php echo $css;?>
   </head>
   <body>
+    <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
+    <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
     <header>
       <div class='main-nav'>
         <a href="/"><img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100"></a>
@@ -57,13 +44,9 @@
       <div class='fold'>
         <img src='../assets/svg/dok17.svg' alt="">
       </div>
-      <div class="container">
-        <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
-        <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
-
+      <div class='container'>
         <?php echo $content; ?>
       </div>
-
       <?php echo $js;?>
     </main>
     <footer>

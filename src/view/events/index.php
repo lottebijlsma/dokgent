@@ -44,8 +44,9 @@
     <h1><em class='section-title'>Blijf op de hoogte</em></h1>
   </header>
   <p>Schrijf je in op onze nieuwsbrief om op de hoogte te blijven van alle coole dingen die bij DOKGent gebeuren.</p>
-  <form class="" action="index.html" method="post">
-    <input type="email" name="email" placeholder='ronaldmcdonald@gmail.com' >
-    <input type="submit" name="" value="oké">
+  <form action="index.php" method="post">
+    <p class="error"></p>
+    <input class='main-input' type='email' name='email' id='email' placeholder='ronaldmcdonald@gmail.com' required>
+    <input class='submit-btn' type="submit" value="oké">
   </form>
 </section>

@@ -1,5 +1,11 @@
-<section class='event-detail content'>
-  <header>
+<section class='event-detail'>
+  <header class='content'>
+    <p class='breadcrumbs'>
+      <a href='?page=events'>agenda</a> &#10140;
+      <a href='index.php?page=detail&amp;id=<?php echo($events['id']); ?>'>
+        <?php echo($events['title']);?>
+      </a>
+    </p>
     <h1><em class='section-title'><?php echo($events['title']);?></em></h1>
   </header>
   <div class='event-content'>

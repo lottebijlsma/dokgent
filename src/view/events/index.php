@@ -10,7 +10,7 @@
         buurtbewoners, aanstormend artistiek talent, bedrijven enz. worden betrokken.</p>
         <button type='submit' name="button"><a href='#'>Bekijk het programma</a></button>
     </div>
-    <div class='about-image'>
+    <div>
       <img class='about-image' src="./assets/img/placeholder.png" alt="">
     </div>
   </div>
@@ -21,7 +21,7 @@
     <header>
       <h1><em class='section-title'>Evenementen in de kijker</em></h1>
     </header>
-    <a href='?page=events'>Bekijk alle evenementen</a>
+    <a class='all-events' href='?page=events'>Bekijk alle evenementen</a>
   </div>
   <div class='highlight-events'>
     <?php foreach ($images as $image): ?>
@@ -37,4 +37,15 @@
   <header class='content'>
     <h1><em class='section-title'>Agenda</em></h1>
   </header>
+</section>
+
+<section class='newsletter content'>
+  <header>
+    <h1><em class='section-title'>Blijf op de hoogte</em></h1>
+  </header>
+  <p>Schrijf je in op onze nieuwsbrief om op de hoogte te blijven van alle coole dingen die bij DOKGent gebeuren.</p>
+  <form class="" action="index.html" method="post">
+    <input type="email" name="email" placeholder='ronaldmcdonald@gmail.com' >
+    <input type="submit" name="" value="oké">
+  </form>
 </section>

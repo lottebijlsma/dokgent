@@ -18,6 +18,21 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
+
+    <!-- <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: ['Rubik:400,500,700'] }
+      };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script> -->
     <title>DOK</title>
     <?php echo $css;?>
   </head>
@@ -60,13 +75,9 @@
             <p>Telefoon: 09 224 19 40</p>
           </address>
         </div>
-        <div class='newsletter'>
-          <p>Abonneer je op onze nieuwsbrief</p>
-          <form class='newsletter' method="post">
-            <input type='email' name='email' placeholder='jakeweary@gmail.com'>
-            <input type='submit' name="" value='->'>
-          </form>
-        </div>
+        <!-- <div class="social-media">
+
+        </div> -->
       </div>
     </footer>
   </body>

@@ -65,9 +65,13 @@
             <p>Telefoon: 09 224 19 40</p>
           </address>
         </div>
-        <!-- <div class="social-media">
-
-        </div> -->
+        <div class="social-media">
+          <h1 class='socials'>Sociale media</h1>
+          <a href="https://www.facebook.com/DOKgent/"><img src='../assets/svg/facebook.svg' alt='Social media icoon voor Facebook' height="20"></a>
+          <a href="https://twitter.com/dokgent"><img src='../assets/svg/twitter.svg' alt='Social media icoon voor Twitter' height="20"></a>
+          <a href="https://www.instagram.com/dokgent/"><img src='../assets/svg/instagram.svg' alt='Social media icoon voor Instagram' height="20"></a>
+          <a href="https://vimeo.com/dokgent"><img src='../assets/svg/vimeo.svg' alt='Social media icoon voor Vimeo' height="20"></a>
+        </div>
       </div>
     </footer>
     <?php echo $js;?>

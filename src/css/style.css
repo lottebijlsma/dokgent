@@ -408,6 +408,19 @@ h4 {
   text-transform: uppercase;
 }
 
+.socials {
+  font-size: 1.4rem;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
+.social-media {
+
+  & a {
+    padding: 1rem;
+  }
+}
+
 @media (width <= 1440px) {
 
   .event-image {
@@ -566,6 +579,17 @@ h4 {
   .highlights {
     width: 100vw;
     height: 45rem;
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .socials {
+    text-align: left;
+    padding-top: 2rem;
   }
 }
 

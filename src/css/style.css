@@ -44,6 +44,19 @@ h1 {
   color: var(--main-red);
 }
 
+.hidden {
+  display: none;
+}
+
+.logo {
+  transform: rotate(0);
+  width: 10rem;
+  height: 3rem;
+  background-image: url(../assets/img/doklogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 a:link,
 a:hover,
 a:active,
@@ -91,7 +104,7 @@ a:visited {
   background-image: url(../assets/svg/patroon.svg);
   background-repeat: repeat;
   background-position: center;
-  background-size: 40%;
+  background-size: contain;
   mix-blend-mode: multiply;
 }
 
@@ -103,12 +116,19 @@ a:visited {
   padding-bottom: .3rem;
 }
 
-.content-wrap {
+.content-wrap, .footer-wrap {
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+}
+
+.content-wrap {
+  justify-content: space-around;
+}
+
+.footer-wrap {
+  justify-content: space-between;
 }
 
 .about {
@@ -279,7 +299,7 @@ h2 {
 
 .event-detail {
   background-image: url(../assets/svg/pattern.svg);
-  background-size: 35%;
+  background-size: 20%;
   background-position: center center;
   background-repeat: repeat-x;
 }
@@ -422,6 +442,18 @@ h4 {
   }
 }
 
+.select-month {
+  display: flex;
+}
+
+.months {
+  margin-right: 3rem;
+
+  & input {
+    margin-right: .5rem;
+  }
+}
+
 @media (width <= 1440px) {
 
   .event-image {
@@ -522,6 +554,7 @@ h4 {
 
   .highlight-header {
     justify-content: center;
+    padding-bottom: 2rem;
   }
 
   .event-detail-image {
@@ -555,18 +588,6 @@ h4 {
   }
 }
 
-.select-month {
-  display: flex;
-}
-
-.months {
-  margin-right: 3rem;
-
-  & input {
-    margin-right: .5rem;
-  }
-}
-
 @media (width <= 690px) {
 
   .highlight-image {
@@ -586,7 +607,7 @@ h4 {
     height: 45rem;
   }
 
-  .content-wrap {
+  .footer-wrap {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -598,7 +619,6 @@ h4 {
   }
 
   .fold {
-    background-size: 70%;
 
     & img {
       width: 50vw;
@@ -623,6 +643,15 @@ h4 {
 }
 
 @media (width <= 580px) {
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .filter {
+    height: 30rem;
+    padding: 1rem;
+  }
 
   .about-info { width: 80vw; }
 
@@ -694,6 +723,10 @@ h4 {
 
   .event-title {
     width: 50vw;
+  }
+
+  .event-detail-image {
+    height: 20rem;
   }
 
   .about-content {

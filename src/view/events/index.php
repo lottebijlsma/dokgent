@@ -1,12 +1,11 @@
 <section class='about'>
   <div class='content-wrap content'>
-    <div>
+    <div class='about-content'>
       <picture class='about-image'>
-        <source media="(max-width: 585px)" srcset="./assets/img/default.gif" />
-        <source type="image/webp" media="(min-width: 878px)" srcset="./assets/img/about-image.webp" />
-        <source media="(min-width: 878px)" srcset="./assets/img/about-image.png" />
+        <source media="(max-width: 690px)" srcset="assets/img/default.gif" />
+        <source type="image/webp" srcset="./assets/img/about-image.webp">
+        <img src="./assets/img/about-image.png" alt="About section image">
       </picture>
-      <!-- <img class='about-image' src="./assets/img/about-image.png" alt=""> -->
     </div>
     <div class='about-content about-container'>
       <header>
@@ -15,8 +14,9 @@
       <p class='about-info'>Een <em class='text-em-small'>ontmoetingsplek</em>, een platform voor <em class='text-em-small'>creatie</em> en een werkplek,
         maar tegelijkertijd ook een publieksplek met grote en kleine <em class='text-em-small'>evenementen</em>
         voor jong en oud, waar <em class='text-em-small'>iedereen welkom</em> is. Een project waar ook organisaties,
-        buurtbewoners, aanstormend artistiek talent, bedrijven enz. worden betrokken.</p>
-        <button type='submit' name="button"><a href='?page=events'>Bekijk het programma</a></button>
+        buurtbewoners, aanstormend artistiek talent, bedrijven enz. worden betrokken.
+      </p>
+      <button type='submit' name="button"><a href='?page=events'>Bekijk het programma</a></button>
     </div>
   </div>
 </section>

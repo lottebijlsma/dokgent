@@ -26,9 +26,8 @@
     <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
     <header>
       <div class='main-nav'>
-        <!-- H1 hier rond zetten -->
         <a href="/">
-          <img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100">
+          <h1 class='logo'><span class='hidden'>DOKGent</span></h1>
         </a>
         <nav>
           <ul id='main-nav-links' class='main-nav-links'>
@@ -44,7 +43,7 @@
           </ul>
           <div class='mobile-nav-toggle'>
             <input type="checkbox" />
-            <span>menu</span>
+            <span class='nav-link'>menu</span>
             <ul class='mobile-nav-links'>
               <li>
                 <a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
@@ -69,7 +68,7 @@
       </div>
     </main>
     <footer>
-      <div class='content-wrap content'>
+      <div class='footer-wrap content'>
         <div class='contact-info'>
           <img src='./assets/img/doklogo.png' alt="logo van DOKGent" width="100">
           <address class='contact'>

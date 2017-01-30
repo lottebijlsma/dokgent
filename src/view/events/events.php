@@ -46,8 +46,8 @@
         <h4>Zoek op titel</h4>
         <input class='main-input' type="text" id="search" name="query" placeholder="Zoek op titel" value="">
         <input type="hidden" name="page" value="search">
-        <h4>Zoek op tags</h4>
-        <div class='styled-select'>
+        <h4 class='hide-mobile'>Zoek op tags</h4>
+        <div class='styled-select hide-mobile'>
           <select name='tag' id='tag' placeholder=" een tag">
             <option value"" disabled selected>Kies een tag</option>
             <?php foreach ($tags as $tag): ?>
@@ -55,7 +55,7 @@
             <?php endforeach; ?>
           </select>
         </div>
-        <input class='submit-btn' type="submit" name="action" value="zoek">
+        <br/><input class='submit-btn' type="submit" name="action" value="zoek">
       </form>
     </div>
     <div class='event'>

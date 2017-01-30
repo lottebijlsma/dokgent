@@ -43,7 +43,7 @@ class EventsController extends Controller {
 
     // example: events ending in may 2017
     $conditions[0] = array(
-      'field' => 'end',
+      'field' => 'start',
       'comparator' => '>=',
       'value' => '2017-05-01 00:00:00'
     );
@@ -55,7 +55,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['juni'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-06-01 00:00:00'
       );
@@ -68,7 +68,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['juli'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-07-01 00:00:00'
       );
@@ -81,7 +81,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['augustus'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-08-01 00:00:00'
       );
@@ -94,7 +94,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['september'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-09-01 00:00:00'
       );

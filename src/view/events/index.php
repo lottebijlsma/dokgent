@@ -1,6 +1,14 @@
 <section class='about'>
   <div class='content-wrap content'>
-    <div class='about-content content'>
+    <div>
+      <picture class='about-image'>
+        <source media="(max-width: 585px)" srcset="./assets/img/default.gif" />
+        <source type="image/webp" media="(min-width: 878px)" srcset="./assets/img/about-image.webp" />
+        <source media="(min-width: 878px)" srcset="./assets/img/about-image.png" />
+      </picture>
+      <!-- <img class='about-image' src="./assets/img/about-image.png" alt=""> -->
+    </div>
+    <div class='about-content about-container'>
       <header>
         <h1><em class='section-title'>"Een werfplek voor verpozing <br/ >&amp; creatieve manoeuvres"</em></h1>
       </header>
@@ -8,10 +16,7 @@
         maar tegelijkertijd ook een publieksplek met grote en kleine <em class='text-em-small'>evenementen</em>
         voor jong en oud, waar <em class='text-em-small'>iedereen welkom</em> is. Een project waar ook organisaties,
         buurtbewoners, aanstormend artistiek talent, bedrijven enz. worden betrokken.</p>
-        <button type='submit' name="button"><a href='#'>Bekijk het programma</a></button>
-    </div>
-    <div>
-      <img class='about-image' src="./assets/img/placeholder.png" alt="">
+        <button type='submit' name="button"><a href='?page=events'>Bekijk het programma</a></button>
     </div>
   </div>
 </section>
@@ -29,6 +34,7 @@
         <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
         <img class='highlight-image' height="250" src="../assets/img/database/<?php echo($image['img']);?>"
           srcset="../assets/img/database/thumb-<?php echo($image['img']);?> 400w">
+        <!-- <img class='highlight-image' height='250' src="../assets/img/database/thumb-<?php echo($image['img'])?>"> -->
       </a>
     <?php endforeach; ?>
   </div>

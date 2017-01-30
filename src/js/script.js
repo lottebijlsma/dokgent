@@ -1,17 +1,17 @@
 (() => {
 
-  // const fetchDate = () => {
-  //   fetch(`index.php?t=${Date.now()}`, {
-  //     headers: new Headers({
-  //       Accept: `application/json`
-  //     })
-  //   })
-  //   .then(r => r.json())
-  //   .then(res => {
-  //     console.log(res);
-  //   })
-  //   .catch(e => console.error(e));
-  // };
+  const fetchDate = () => {
+    fetch(`index.php?t=${Date.now()}`, {
+      headers: new Headers({
+        Accept: `application/json`
+      })
+    })
+    .then(r => r.json())
+    .then(res => {
+      console.log(res);
+    })
+    .catch(e => console.error(e));
+  };
 
 
   const $form = document.forms[0];
@@ -63,7 +63,7 @@
   };
 
   const init = () => {
-    // fetchDate();
+    fetchDate();
     $form.noValidate = true;
     $form.addEventListener(`submit`, onSubmit);
     document.getElementById(`email`).addEventListener(`blur`, onEmailChange);

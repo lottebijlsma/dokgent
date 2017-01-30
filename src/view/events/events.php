@@ -9,7 +9,8 @@
     <?php foreach ($images as $image): ?>
       <a href='index.php?page=detail&amp;id=<?php echo($image['id']); ?>'>
         <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
-        <img class='highlight-image' src="../assets/img/database/<?php echo($image['img']);?>" alt="img van gehighlighte evenementen" height="250">
+        <img class='highlight-image' height="250" src="../assets/img/database/<?php echo($image['img']);?>"
+          srcset="../assets/img/database/thumb-<?php echo($image['img']);?> 400w">
       </a>
     <?php endforeach; ?>
   </div>
@@ -61,7 +62,8 @@
         <div>
           <a href='index.php?page=detail&amp;id=<?php echo($event['id']); ?>'>
             <h2 class='event-title'><?php echo $event['title']; ?></h2>
-            <img class='event-image' src="./assets/img/database/<?php echo($event['img']); ?>" alt='foto van het evenement' width="275"/>
+            <img class='event-image' width="275" src="../assets/img/database/<?php echo($event['img']);?>"
+              srcset="../assets/img/database/thumb-<?php echo($event['img']);?> 400w">
           </a>
           <p class='tag'><?php foreach($event['tags'] as $tag): ?>
             <?php echo $tag['tag'];?><?php endforeach;?>

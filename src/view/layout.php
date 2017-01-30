@@ -36,7 +36,7 @@
               echo 'nav-link-active';}?>' href="/">Home</a>
             </li>
             <li>
-              <a class='nav-link <?php if($_GET['page'] === 'events') {echo 'nav-link-active';}?>' href="?page=events">Programma</a>
+              <a class='nav-link <?php if($_GET['page'] === 'events' || $_GET['page'] === 'detail' ) {echo 'nav-link-active';}?>' href="?page=events">Programma</a>
             </li>
             <li>
               <a class='nav-link' href="">Informatie</a>

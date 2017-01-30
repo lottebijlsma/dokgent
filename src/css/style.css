@@ -115,7 +115,7 @@ a:visited {
   padding: 4rem;
   display: flex;
   align-items: center;
-  background-image: url(../assets/img/try2.png);
+  background-image: url(../assets/img/cardboard-background.png);
   background-size: 100% 100%;
 }
 
@@ -166,7 +166,8 @@ footer {
 }
 
 .agenda {
-  background-image: url(../assets/img/try2.png);
+  background-image: url(../assets/img/cardboard-background.png);
+  background-size: 100% 100%;
 }
 
 .newsletter {
@@ -446,6 +447,12 @@ h4 {
 
   .desc-specs {
     order: -4;
+  }
+
+  .mobile-position-change {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
   }
 
   .highlight-image {

@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+    <meta name="description" content="Redesign DOKGent"/>
+    <meta name="author" content="Lotte Bijlsma"/>
+    <meta name="keywords" content="DOKGent Gent zomer"/>
     <script type="text/javascript">
       WebFontConfig = {
         google: { families: ['Rubik:400,500,700'] }
@@ -26,40 +29,53 @@
     <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
     <header>
       <div class='main-nav'>
-        <a href="/">
-          <img src='../assets/img/doklogo.png' alt="logo van DOK Gent" width="100">
+        <a href="index.php">
+          <h1 class='logo'><span class='hidden'>DOKGent</span></h1>
         </a>
         <nav>
           <ul id='main-nav-links' class='main-nav-links'>
             <li>
               <a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
-              echo 'nav-link-active';}?>' href="/">Home</a>
+              echo 'nav-link-active';}?>' href="index.php">Home</a>
             </li>
             <li>
               <a class='nav-link <?php if($_GET['page'] === 'events' || $_GET['page'] === 'detail' ) {echo 'nav-link-active';}?>' href="?page=events">Programma</a>
             </li>
-            <li>
-              <a class='nav-link' href="">Informatie</a>
-            </li>
-            <li>
-              <a class='nav-link' href="">Blog</a>
-            </li>
+            <li><a class='nav-link' href="">Informatie</a></li>
+            <li><a class='nav-link' href="">Blog</a></li>
           </ul>
+          <div class='mobile-nav-toggle'>
+            <input type="checkbox" />
+            <span class='nav-link'>menu</span>
+            <ul class='mobile-nav-links'>
+              <li>
+                <a class='nav-link <?php if(empty($_GET['page']) || $_GET['page'] === 'home') {
+                echo 'nav-link-active';}?>' href="/">Home</a>
+              </li>
+              <li>
+                <a class='nav-link <?php if($_GET['page'] === 'events' || $_GET['page'] === 'detail' ) {echo 'nav-link-active';}?>' href="?page=events">Programma</a>
+              </li>
+              <li><a class='nav-link' href="">Informatie</a></li>
+              <li><a class='nav-link' href="">Blog</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
     <main>
       <div class='fold'>
-        <img src='../assets/svg/dok17.svg' alt="">
+        <a href="index.php">
+          <img class='fold-image' src='assets/svg/dok17.svg' alt='DOK17 afbeelding'>
+        </a>
       </div>
       <div class='container'>
         <?php echo $content; ?>
       </div>
     </main>
     <footer>
-      <div class='content-wrap content'>
+      <div class='footer-wrap content'>
         <div class='contact-info'>
-          <img src='./assets/img/doklogo.png' alt="logo van DOKGent" width="100">
+          <img src='assets/img/doklogo.png' alt="logo van DOKGent" width="100">
           <address class='contact'>
             <p>Adres: Koopvaardijlaan 13</p>
             <p>Telefoon: 09 224 19 40</p>
@@ -67,10 +83,10 @@
         </div>
         <div class="social-media">
           <h1 class='socials'>Sociale media</h1>
-          <a href="https://www.facebook.com/DOKgent/"><img src='../assets/svg/facebook.svg' alt='Social media icoon voor Facebook' height="20"></a>
-          <a href="https://twitter.com/dokgent"><img src='../assets/svg/twitter.svg' alt='Social media icoon voor Twitter' height="20"></a>
-          <a href="https://www.instagram.com/dokgent/"><img src='../assets/svg/instagram.svg' alt='Social media icoon voor Instagram' height="20"></a>
-          <a href="https://vimeo.com/dokgent"><img src='../assets/svg/vimeo.svg' alt='Social media icoon voor Vimeo' height="20"></a>
+          <a href="https://www.facebook.com/DOKgent/"><img src='assets/svg/facebook.svg' alt='Social media icoon voor Facebook' height="20"></a>
+          <a href="https://twitter.com/dokgent"><img src='assets/svg/twitter.svg' alt='Social media icoon voor Twitter' height="20"></a>
+          <a href="https://www.instagram.com/dokgent/"><img src='assets/svg/instagram.svg' alt='Social media icoon voor Instagram' height="20"></a>
+          <a href="https://vimeo.com/dokgent"><img src='assets/svg/vimeo.svg' alt='Social media icoon voor Vimeo' height="20"></a>
         </div>
       </div>
     </footer>

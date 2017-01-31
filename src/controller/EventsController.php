@@ -22,11 +22,6 @@ class EventsController extends Controller {
       exit();
     }
     $this->set('items', $items);
-    // als de param t niet leeg is, deze if binnengaan
-    // hier checken op $this->isAjax()
-    // content-type als app/json returnen
-    // zorgen dat je enkel de events ophaalt die voldoen aan de param t in $GET
-    // json_encode($images)
 
     if(!empty($_POST)) $this->handleRegistration();
   }
@@ -42,20 +37,22 @@ class EventsController extends Controller {
 
 
     // example: events ending in may 2017
-    $conditions[0] = array(
-      'field' => 'end',
-      'comparator' => '>=',
-      'value' => '2017-05-01 00:00:00'
-    );
-    $conditions[1] = array(
-      'field' => 'end',
-      'comparator' => '<',
-      'value' => '2017-06-01 00:00:00'
-    );
+    if (isset($_POST['mei'])) {
+      $conditions[0] = array(
+        'field' => 'start',
+        'comparator' => '>=',
+        'value' => '2017-05-01 00:00:00'
+      );
+      $conditions[1] = array(
+        'field' => 'end',
+        'comparator' => '<',
+        'value' => '2017-06-01 00:00:00'
+      );
+    }
 
     if (isset($_POST['juni'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-06-01 00:00:00'
       );
@@ -68,7 +65,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['juli'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-07-01 00:00:00'
       );
@@ -81,7 +78,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['augustus'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-08-01 00:00:00'
       );
@@ -94,7 +91,7 @@ class EventsController extends Controller {
 
     if (isset($_POST['september'])) {
       $conditions[0] = array(
-        'field' => 'end',
+        'field' => 'start',
         'comparator' => '>=',
         'value' => '2017-09-01 00:00:00'
       );

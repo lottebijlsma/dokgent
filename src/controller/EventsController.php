@@ -12,12 +12,10 @@ class EventsController extends Controller {
   }
 
   private function getCalendar(){
-    $curr_month = date("m");
-    $curr_year = date("Y");
-
-    $cal = array();
-
-    $cal_days = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y"));
+    // $curr_month = date("m");
+    // $curr_year = date("Y");
+    // $cal = array();
+    // $cal_days = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y"));
     // datums met events ophalen en assignen aan $cal_events;
     // $cal_days en $cal_events pushen naar $cal
     // $cal_events = $this->eventDAO->selectAllDates();

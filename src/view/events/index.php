@@ -42,6 +42,11 @@
   <header class='content'>
     <h1><em class='section-title'>Agenda</em></h1>
   </header>
+  <div class="calendar-overview">
+    <!-- <?php for ($i = 1; $i < $cal['cal_days'] + 1; $i++) { ?>
+      <li class="calendar-day"><?php echo($i); ?></li>
+    <?php } ?> -->
+  </div>
 </section>
 
 <section class='newsletter content'>

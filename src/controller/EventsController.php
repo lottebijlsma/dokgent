@@ -11,9 +11,31 @@ class EventsController extends Controller {
     $this->eventDAO = new EventDAO();
   }
 
+  private function getCalendar(){
+    $curr_month = date("m");
+    $curr_year = date("Y");
+
+    $cal = array();
+
+    $cal_days = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y"));
+    // datums met events ophalen en assignen aan $cal_events;
+    // $cal_days en $cal_events pushen naar $cal
+    // $cal_events = $this->eventDAO->selectAllDates();
+    // $this->set('cal_events', $cal_events);
+    // $datetime = serialize($cal_events);
+    // $cal_events = date('d', strtotime($datetime));
+    // $curr_month = date("m");
+    // $curr_year = date("Y");
+    // $cal = array($cal_events, $cal_days);
+    // return $cal;
+  }
+
   public function index() {
     $images = $this->eventDAO->highlights();
     $this->set('images', $images);
+
+    $days = $this->getCalendar();
+    $this->set('days', $days);
 
     $items = $this->eventDAO->selectAll();
     if($this->isAjax) {

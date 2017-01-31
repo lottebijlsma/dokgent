@@ -16,6 +16,13 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectAllDates() {
+    $sql = "SELECT `start` FROM `ma3_dok_events`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   public function tags() {
     $sql = "SELECT * FROM `ma3_dok_tags`";
     $stmt = $this->pdo->prepare($sql);

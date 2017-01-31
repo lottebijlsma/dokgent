@@ -439,6 +439,24 @@ h4 {
   & input { margin-right: .5rem; }
 }
 
+.calendar-overview {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  padding-top: 20px;
+}
+
+.calendar-day {
+  font-size: 3rem;
+  color: white;
+  flex-grow: 2;
+  flex-basis: 0;
+  padding: 2rem;
+  list-style-type: none;
+  text-align: left;
+}
+
 @media (width <= 1440px) {
 
   .event-image { width: 18vw; }

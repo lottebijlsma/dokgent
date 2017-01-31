@@ -3,8 +3,8 @@
     <div class='about-content'>
       <picture class='about-image'>
         <source media="(max-width: 800px)" srcset="assets/img/default.gif"/>
-        <source type="image/webp" srcset="./assets/img/about-image.webp"/>
-        <img src="./assets/img/about-image.png" alt="about sectie afbeelding"/>
+        <source type="image/webp" srcset="assets/img/about-image.webp"/>
+        <img src="assets/img/about-image.png" alt="about sectie afbeelding"/>
       </picture>
     </div>
     <div class='about-content about-container'>

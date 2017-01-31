@@ -18,6 +18,8 @@
   & h1, p { visibility: visible; }
 }
 
+/*ALGEMEEN*/
+
 body {
   font-family: Rubik;
   color: var(--main-black);
@@ -36,9 +38,47 @@ h1 {
   line-height: 2.1rem;
 }
 
+h3 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
 .error { color: var(--main-red); }
 
 .hidden { display: none; }
+
+button {
+  max-width: 20rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: .8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 2.8rem;
+  margin-top: 3rem;
+  background-color: white;
+  border: none;
+}
+
+.socials {
+  font-size: 1.4rem;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
+.social-media {
+
+  & a { padding: 1rem; }
+}
+
+/*INDEX*/
 
 .logo {
   transform: rotate(0);
@@ -151,21 +191,6 @@ a:visited {
   }
 }
 
-button {
-  max-width: 20rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  padding: .8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  border-radius: 2.8rem;
-  margin-top: 3rem;
-  background-color: white;
-  border: none;
-}
-
-.text-em-small { font-weight: 500; }
-
 .highlight-header {
   display: flex;
   justify-content: space-between;
@@ -188,7 +213,7 @@ footer {
   justify-content: space-between;
 
   & header {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -210,6 +235,50 @@ input {
   border-radius: 2.8rem;
   border: .1rem solid black;
 }
+
+.main-input { border: 0; }
+
+.newsletter-input {
+  background-color: var(--main-yellow);
+  border: 0;
+}
+
+.submit-btn {
+  border: 0;
+  margin-top: 3rem;
+  background-color: var(--main-green);
+  padding: 1rem 2rem;
+}
+
+.calendar-view {
+  margin-top: 3rem;
+}
+
+.calendar-day {
+  color: white;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.calendar-day-event {
+  background-image: url(../assets/svg/active-event.svg);
+  background-repeat: no-repeat;
+}
+
+.calendar-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-today {
+  margin-top: 1rem;
+
+  & li {
+    margin-bottom: .5rem;
+  }
+}
+
+/*EVENTS*/
 
 .event {
   width: 65vw;
@@ -266,6 +335,85 @@ h2 {
     filter: brightness(80%);
   }
 }
+
+.event-highlight {
+  font-weight: 500;
+  background-image: linear-gradient(0deg, transparent .8rem, var(--main-blue) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5;
+  mix-blend-mode: hard-light;
+}
+
+.highlight-image {
+  margin-top: 3rem;
+  width: 19vw;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 2.8rem;
+  margin-left: 1.5rem;
+  filter: none;
+  transition: filter .3s ease-in-out;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.filter {
+  background-image: url(../assets/img/cardboard.jpg);
+  width: 30rem;
+  height: 40rem;
+  border-radius: 2.8rem;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.events-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.styled-select select {
+  background-color: white;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  font-family: Rubik;
+  color: var(--main-black);
+  padding: .5rem;
+  border: 0;
+  height: 3.5rem;
+  margin-top: 0;
+}
+
+.highlight-events {
+  display: flex;
+  justify-content: center;
+}
+
+.event-highlight-title {
+  background-image: linear-gradient(0deg, transparent .8rem, var(--main-red) 0);
+  background-position: left 1rem top .7rem;
+  padding: .5rem;
+  mix-blend-mode: hard-light;
+  margin-top: 5rem;
+  margin-left: 2.5rem;
+}
+
+.all-events:link { text-decoration: underline; }
+
+.highlights { margin-bottom: 3rem; }
+
+.select-month { display: flex; }
+
+.months {
+  margin-right: 3rem;
+
+  & input { margin-right: .5rem; }
+}
+
+/*DETAIL*/
+
+.text-em-small { font-weight: 500; }
 
 .event-detail-image {
   height: 40rem;
@@ -326,99 +474,6 @@ dd { padding-left: .5rem; }
   justify-content: flex-start;
 }
 
-h3 {
-  font-weight: 500;
-  font-size: 1.8rem;
-  padding-bottom: 1rem;
-}
-
-.event-highlight {
-  font-weight: 500;
-  background-image: linear-gradient(0deg, transparent .8rem, var(--main-blue) 0);
-  background-position: left 1rem top .7rem;
-  padding: .5;
-  mix-blend-mode: hard-light;
-}
-
-.highlight-image {
-  margin-top: 3rem;
-  width: 19vw;
-  height: 35rem;
-  object-fit: cover;
-  border-radius: 2.8rem;
-  margin-left: 1.5rem;
-  filter: none;
-  transition: filter .3s ease-in-out;
-
-  &:hover {
-    filter: brightness(90%);
-  }
-}
-
-.filter {
-  background-image: url(../assets/img/cardboard.jpg);
-  width: 30rem;
-  height: 40rem;
-  border-radius: 2.8rem;
-  padding: 2rem;
-  margin-top: 3rem;
-}
-
-.main-input { border: 0; }
-
-.newsletter-input {
-  background-color: var(--main-yellow);
-  border: 0;
-}
-
-.submit-btn {
-  border: 0;
-  margin-top: 3rem;
-  background-color: var(--main-green);
-  padding: 1rem 2rem;
-}
-
-.events-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.styled-select select {
-  background-color: white;
-  border-radius: 5rem;
-  font-size: 1.7rem;
-  font-family: Rubik;
-  color: var(--main-black);
-  padding: .5rem;
-  border: 0;
-  height: 3.5rem;
-  margin-top: 0;
-}
-
-h4 {
-  text-decoration: underline;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-}
-
-.highlight-events {
-  display: flex;
-  justify-content: center;
-}
-
-.event-highlight-title {
-  background-image: linear-gradient(0deg, transparent .8rem, var(--main-red) 0);
-  background-position: left 1rem top .7rem;
-  padding: .5rem;
-  mix-blend-mode: hard-light;
-  margin-top: 5rem;
-  margin-left: 2.5rem;
-}
-
-.all-events:link { text-decoration: underline; }
-
-.highlights { margin-bottom: 3rem; }
-
 .breadcrumbs {
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -426,52 +481,7 @@ h4 {
   text-transform: uppercase;
 }
 
-.socials {
-  font-size: 1.4rem;
-  text-align: right;
-  padding-bottom: 1rem;
-}
-
-.social-media {
-
-  & a { padding: 1rem; }
-}
-
-.select-month { display: flex; }
-
-.months {
-  margin-right: 3rem;
-
-  & input { margin-right: .5rem; }
-}
-
-.calendar-view {
-  margin-top: 3rem;
-}
-
-.calendar-day {
-  color: white;
-  font-size: 3rem;
-  padding: 2rem;
-}
-
-.calendar-day-event {
-  background-image: url(../assets/svg/active-event.svg);
-  background-repeat: no-repeat;
-}
-
-.calendar-wrap {
-  display: flex;
-  justify-content: space-around;
-}
-
-.event-today {
-  margin-top: 1rem;
-
-  & li {
-    margin-bottom: .5rem;
-  }
-}
+/*MEDIA QUERIES*/
 
 @media (width <= 1440px) {
 

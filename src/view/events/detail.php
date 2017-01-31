@@ -21,11 +21,14 @@
             <div class='item'>
               <dt>Datum:</dt>
               <dd> <?php $dt = new DateTime($events['start']);  $date = $dt->format('d M'); echo $date; ?> -
-              <?php $dt = new DateTime($events['end']);  $date = $dt->format('d M'); echo $date; ?></dd>
+              <?php $dt = new DateTime($events['end']);  $date = $dt->format('d M'); echo $date; ?>
+              </dd>
             </div>
             <div class='item'>
               <dt>Tijdstip:</dt>
-              <dd> <?php $dt = new DateTime($events['start']);  $date = $dt->format('H'); echo $date; ?>u - <?php $dt = new DateTime($events['end']);  $date = $dt->format('H'); echo $date; ?>u</dd>
+              <dd> <?php $dt = new DateTime($events['start']);  $date = $dt->format('H'); echo $date; ?>u -
+              <?php $dt = new DateTime($events['end']);  $date = $dt->format('H'); echo $date; ?>u
+              </dd>
             </div>
             <div class='item'>
               <dt>Locatie:</dt>

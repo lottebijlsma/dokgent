@@ -9,9 +9,7 @@
     <?php foreach ($images as $image): ?>
       <a href='index.php?page=detail&amp;id=<?php echo($image['id']); ?>'>
         <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
-        <img class='highlight-image' height="250" src="../assets/img/database/<?php echo($image['img']);?>"
-          srcset="../assets/img/database/thumb-<?php echo($image['img']);?> 400w">
-        <!-- <img class='highlight-image' height='250' src="../assets/img/database/thumb-<?php echo($image['img'])?>"> -->
+        <img alt='Afbeeldingen evenementen in spotlight' class='highlight-image' height='250' src="assets/img/database/thumb-<?php echo($image['img'])?>">
       </a>
     <?php endforeach; ?>
   </div>
@@ -29,33 +27,34 @@
         <h4>Zoek op maand</h4>
         <div class='select-month'>
           <div class='months'>
-            <input type="radio" name="mei" value="">
-            <label for="">mei</label> <br/>
-            <input type="radio" name="juni" value="">
-            <label for="">juni</label><br/>
-            <input type="radio" name="juli" value="">
-            <label for="">juli</label><br/>
+            <input type="radio" name="mei"/>
+            <label>mei</label> <br/>
+            <input type="radio" name="juni"/>
+            <label>juni</label><br/>
+            <input type="radio" name="juli"/>
+            <label>juli</label><br/>
           </div>
           <div class='months'>
-            <input type="radio" name="augustus" value="">
-            <label for="">augustus</label><br/>
-            <input type="radio" name="september" value="">
-            <label for="">september</label>
+            <input type="radio" name="augustus"/>
+            <label>augustus</label><br/>
+            <input type="radio" name="september"/>
+            <label>september</label>
           </div>
         </div>
         <h4>Zoek op titel</h4>
-        <input class='main-input' type="text" id="search" name="query" placeholder="Zoek op titel" value="">
-        <input type="hidden" name="page" value="search">
+        <input class='main-input' type="text" id="search" name="query" placeholder="Zoek op titel"/>
+        <input type="hidden" name="page" value="search"/>
         <h4 class='hide-mobile'>Zoek op tags</h4>
         <div class='styled-select hide-mobile'>
-          <select name='tag' id='tag' placeholder=" een tag">
-            <option value"" disabled selected>Kies een tag</option>
+          <select name='tag' id='tag'>
+            <option disabled selected>Kies een tag</option>
             <?php foreach ($tags as $tag): ?>
               <option><?php echo($tag['tag']); ?></option>
             <?php endforeach; ?>
           </select>
         </div>
-        <br/><input class='submit-btn' type="submit" name="action" value="zoek">
+        <br/>
+        <input class='submit-btn' type="submit" name="action" value="zoek"/>
       </form>
     </div>
     <div class='event'>
@@ -63,9 +62,7 @@
         <div>
           <a href='index.php?page=detail&amp;id=<?php echo($event['id']); ?>'>
             <h2 class='event-title'><?php echo $event['title']; ?></h2>
-            <!-- <img class='event-image' width='275' src="../assets/img/database/thumb-<?php echo($event['img'])?>"> -->
-            <img class='event-image' width="275" src="../assets/img/database/thumb-<?php echo($event['img'])?>"
-              srcset="../assets/img/database/thumb-<?php echo($event['img']);?> 400w">
+            <img alt='Afbeelding van evenement' class='event-image' width='275' src="assets/img/database/thumb-<?php echo($event['img'])?>">
           </a>
           <p class='tag'><?php foreach($event['tags'] as $tag): ?>
             <?php echo $tag['tag'];?><?php endforeach;?>

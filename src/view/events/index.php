@@ -2,21 +2,21 @@
   <div class='content-wrap content'>
     <div class='about-content'>
       <picture class='about-image'>
-        <source media="(max-width: 690px)" srcset="assets/img/default.gif" />
-        <source type="image/webp" srcset="./assets/img/about-image.webp">
-        <img src="./assets/img/about-image.png" alt="About section image">
+        <source media="(max-width: 800px)" srcset="assets/img/default.gif"/>
+        <source type="image/webp" srcset="./assets/img/about-image.webp"/>
+        <img src="./assets/img/about-image.png" alt="about sectie afbeelding"/>
       </picture>
     </div>
     <div class='about-content about-container'>
       <header>
-        <h1><em class='section-title'>"Een werfplek voor verpozing <br/ >&amp; creatieve manoeuvres"</em></h1>
+        <h1><em class='section-title'>"Een werfplek voor verpozing <br/> &amp; creatieve manoeuvres"</em></h1>
       </header>
       <p class='about-info'>Een <em class='text-em-small'>ontmoetingsplek</em>, een platform voor <em class='text-em-small'>creatie</em> en een werkplek,
         maar tegelijkertijd ook een publieksplek met grote en kleine <em class='text-em-small'>evenementen</em>
         voor jong en oud, waar <em class='text-em-small'>iedereen welkom</em> is. Een project waar ook organisaties,
         buurtbewoners, aanstormend artistiek talent, bedrijven enz. worden betrokken.
       </p>
-      <button type='submit' name="button"><a href='?page=events'>Bekijk het programma</a></button>
+      <a class='btn' href="?page=events">Bekijk het programma</a>
     </div>
   </div>
 </section>
@@ -32,9 +32,7 @@
     <?php foreach ($images as $image): ?>
       <a href='index.php?page=detail&amp;id=<?php echo($image['id']); ?>'>
         <h2 class='event-highlight-title'><?php echo $image['title']; ?></h2>
-        <img class='highlight-image' height="250" src="../assets/img/database/<?php echo($image['img']);?>"
-          srcset="../assets/img/database/thumb-<?php echo($image['img']);?> 400w">
-        <!-- <img class='highlight-image' height='250' src="../assets/img/database/thumb-<?php echo($image['img'])?>"> -->
+        <img alt='foto van evenement in de spotlight' class='highlight-image' height='250' src="assets/img/database/thumb-<?php echo($image['img'])?>"/>
       </a>
     <?php endforeach; ?>
   </div>
@@ -52,8 +50,8 @@
   </header>
   <p>Schrijf je in op onze nieuwsbrief om op de hoogte te blijven van alle coole dingen die bij DOKGent gebeuren.</p>
   <form action="index.php" method="post">
-    <input class='newsletter-input' type='email' name='email' id='email' placeholder='ronaldmcdonald@gmail.com' required>
-    <input class='submit-btn' type="submit" value="oké">
+    <input class='newsletter-input' type='email' name='email' id='email' placeholder='ronaldmcdonald@gmail.com' required />
+    <input class='submit-btn' type="submit" value="oké"/>
     <p class="error"></p>
   </form>
 </section>

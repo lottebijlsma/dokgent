@@ -9,7 +9,7 @@
     <h1><em class='section-title'><?php echo($events['title']);?></em></h1>
   </header>
   <div class='event-content'>
-    <img class="event-detail-image" src="../assets/img/database/<?php echo($events['img']);?>" alt="afbeelding van evenement" width="600"/>
+    <img class="event-detail-image" src="assets/img/database/<?php echo($events['img']);?>" alt="afbeelding van evenement" width="600"/>
     <div class='event-detail-about'>
       <div class='mobile-position-change'>
         <div class='desc-about'>

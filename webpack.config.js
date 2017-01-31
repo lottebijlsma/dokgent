@@ -3,7 +3,8 @@ const webpack = require(`webpack`);
 
 // change for production build on different server path
 // relatieve paden gebruiken
-const publicPath = `/`;
+// const publicPath = `/`;
+const publicPath = `/lotte.bijlsma/20162017/ma3/dok/`;
 
 const config = {
   entry: [

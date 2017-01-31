@@ -64,7 +64,9 @@
     </header>
     <main>
       <div class='fold'>
-        <img src='assets/svg/dok17.svg' alt="">
+        <canvas id="fold-bubble"></canvas>
+        <span class='fold-text'></span>
+        <!-- <img src='assets/svg/dok17.svg' alt=""> -->
       </div>
       <div class='container'>
         <?php echo $content; ?>

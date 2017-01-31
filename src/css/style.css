@@ -89,6 +89,9 @@ a:visited {
 }
 
 .fold {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
   width: 100%;
   height: 50vmin;
   display: flex;
@@ -98,6 +101,33 @@ a:visited {
   background-position: center;
   background-size: contain;
   mix-blend-mode: multiply;
+  /*width: 100%;
+  height: 50vmin;
+  display: flex;
+  justify-content: center;
+  background-image: url(../assets/svg/patroon.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  mix-blend-mode: multiply;*/
+}
+
+.fold-text {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  background: url(../assets/svg/dok17.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  align-self: center;
+  width: 27rem;
+  height: 20rem;
 }
 
 .btn {
@@ -569,7 +599,12 @@ h4 {
 
   .fold {
 
-    & img { width: 50vw; }
+    & .fold-text { background-size: 50%; }
+
+    & canvas {
+      width: 20rem;
+      height: 13rem;
+    }
   }
 
   .event-image { width: 35vw; }

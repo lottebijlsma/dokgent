@@ -448,7 +448,7 @@ h2 {
 
 .event-detail {
   background-image: url(../assets/svg/pattern.svg);
-  background-size: 20%;
+  background-size: contain;
   background-position: center center;
   background-repeat: repeat-x;
 }

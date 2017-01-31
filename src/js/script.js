@@ -49,7 +49,6 @@
   };
 
   const init = () => {
-    // fetchDate();
     $form.noValidate = true;
     $form.addEventListener(`submit`, onSubmit);
     document.getElementById(`email`).addEventListener(`blur`, onEmailChange);

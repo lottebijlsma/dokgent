@@ -64,7 +64,9 @@
     </header>
     <main>
       <div class='fold'>
-        <img src='assets/svg/dok17.svg' alt="">
+        <a href="index.php">
+          <img class='fold-image' src='assets/svg/dok17.svg' alt='DOK17 afbeelding'>
+        </a>
       </div>
       <div class='container'>
         <?php echo $content; ?>

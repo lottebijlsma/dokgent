@@ -22,11 +22,6 @@ class EventsController extends Controller {
       exit();
     }
     $this->set('items', $items);
-    // als de param t niet leeg is, deze if binnengaan
-    // hier checken op $this->isAjax()
-    // content-type als app/json returnen
-    // zorgen dat je enkel de events ophaalt die voldoen aan de param t in $GET
-    // json_encode($images)
 
     if(!empty($_POST)) $this->handleRegistration();
   }

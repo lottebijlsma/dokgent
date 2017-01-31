@@ -184,6 +184,12 @@ footer {
 .agenda {
   background-image: url(../assets/img/cardboard-background.png);
   background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+
+  & header {
+    margin-top: 3rem;
+  }
 }
 
 .newsletter {
@@ -439,6 +445,34 @@ h4 {
   & input { margin-right: .5rem; }
 }
 
+.calendar-view {
+  margin-top: 3rem;
+}
+
+.calendar-day {
+  color: white;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.calendar-day-event {
+  background-image: url(../assets/svg/active-event.svg);
+  background-repeat: no-repeat;
+}
+
+.calendar-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-today {
+  margin-top: 1rem;
+
+  & li {
+    margin-bottom: .5rem;
+  }
+}
+
 @media (width <= 1440px) {
 
   .event-image { width: 18vw; }
@@ -558,9 +592,26 @@ h4 {
       padding: 0;
     }
   }
+
+  .calendar-wrap {
+    flex-flow: column nowrap;
+  }
+
+  .agenda {
+    height: 50rem;
+  }
+
+  .calendar-view {
+    align-self: center;
+  }
 }
 
 @media (width <= 690px) {
+
+  .calendar-day {
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
 
   .highlight-header {
     justify-content: center;
@@ -616,9 +667,19 @@ h4 {
       align-self: center;
     }
   }
+
+  .agenda {
+    height: 55vh;
+  }
 }
 
 @media (width <= 580px) {
+
+  .calendar-day {
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-size: cover;
+  }
 
   .hide-mobile { display: none; }
 
@@ -682,6 +743,11 @@ h4 {
 }
 
 @media (width <= 414px) {
+
+  .calendar-day {
+    font-size: 1.8rem;
+    padding: .8rem;
+  }
 
   .desc-about, .desc-specs { margin-top: 1.5rem; }
 

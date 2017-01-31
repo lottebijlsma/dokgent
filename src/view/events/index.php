@@ -39,9 +39,61 @@
 </section>
 
 <section class='agenda'>
-  <header class='content'>
-    <h1><em class='section-title'>Agenda</em></h1>
-  </header>
+  <div class='content'>
+    <header>
+      <h1><em class='section-title'>Agenda</em></h1>
+    </header>
+    <div class='calendar-wrap content'>
+      <table class='calendar-view'>
+        <tr>
+          <td class='calendar-day'>1</td>
+          <td class='calendar-day'>2</td>
+          <td class='calendar-day'>3</td>
+          <td class='calendar-day'>4</td>
+          <td class='calendar-day'>5</td>
+          <td class='calendar-day'>6</td>
+          <td class='calendar-day'>7</td>
+        </tr>
+        <tr>
+          <td class='calendar-day'>8</td>
+          <td class='calendar-day'>9</td>
+          <td class='calendar-day'>10</td>
+          <td class='calendar-day calendar-day-event'>11</td>
+          <td class='calendar-day'>12</td>
+          <td class='calendar-day'>13</td>
+          <td class='calendar-day'>14</td>
+        </tr>
+        <tr>
+          <td class='calendar-day'>15</td>
+          <td class='calendar-day'>16</td>
+          <td class='calendar-day'>17</td>
+          <td class='calendar-day'>18</td>
+          <td class='calendar-day calendar-day-event'>19</td>
+          <td class='calendar-day'>20</td>
+          <td class='calendar-day'>21</td>
+        </tr>
+        <tr>
+          <td class='calendar-day'>22</td>
+          <td class='calendar-day calendar-day-event'>23</td>
+          <td class='calendar-day calendar-day-event'>24</td>
+          <td class='calendar-day'>25</td>
+          <td class='calendar-day'>26</td>
+          <td class='calendar-day'>27</td>
+          <td class='calendar-day'>28</td>
+        </tr>
+      </table>
+      <div class='active-events'>
+        <header>
+          <h1>Met vandaag:</h1>
+        </header>
+        <ul class='event-today'>
+          <li>Cosy Cosy</li>
+          <li>Blanco Elisabeth Van Dam</li>
+          <li>Koffie, Taart en Gazetten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class='newsletter content'>

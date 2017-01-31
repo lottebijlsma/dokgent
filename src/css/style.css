@@ -58,7 +58,7 @@ a:visited {
 }
 
 .nav-link-active {
-  background: linear-gradient(0deg, transparent 1rem, var(--main-yellow) 0) 0 0 repeat;
+  background: linear-gradient(0deg, transparent 1.1rem, var(--main-yellow) 0) 0 0 repeat;
   background-position: left 2rem bottom 1rem;
   padding-right: .5rem;
 }
@@ -107,6 +107,8 @@ a:visited {
   padding: .7rem;
   width: 20rem;
   text-align: center;
+  border: none;
+  position: relative;
 }
 
 .section-title {
@@ -228,11 +230,11 @@ h2 {
 }
 
 .event-title {
-  background-image: linear-gradient(0deg, transparent .6rem, var(--main-blue) 0);
+  background-image: linear-gradient(0deg, transparent .7rem, var(--main-blue) 0);
   background-position: left 1rem top .7rem;
   padding: .5rem;
   mix-blend-mode: hard-light;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-left: 1rem;
 }
 
@@ -251,6 +253,12 @@ h2 {
   object-fit: cover;
   height: 18rem;
   border-radius: 2.8rem;
+  filter: none;
+  transition: filter .3s ease-in-out;
+
+  &:hover {
+    filter: brightness(80%);
+  }
 }
 
 .event-detail-image {
@@ -333,6 +341,12 @@ h3 {
   object-fit: cover;
   border-radius: 2.8rem;
   margin-left: 1.5rem;
+  filter: none;
+  transition: filter .3s ease-in-out;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 }
 
 .filter {
@@ -521,13 +535,27 @@ h4 {
 
   .events-content { align-self: center; }
 
-  .event-image { width: 35vw; }
+  .event-image {
+    width: 35vw;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .highlight-image {
+
+    &:hover {
+      filter: none;
+    }
+  }
 
   .event {
 
     & div {
-      padding: 1rem;
-      padding-right: 0;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      padding: 0;
     }
   }
 }
@@ -585,6 +613,7 @@ h4 {
     & div {
       padding: .5;
       margin-bottom: 1.5rem;
+      align-self: center;
     }
   }
 }
@@ -610,7 +639,8 @@ h4 {
     & input {
       position: absolute;
       z-index: 2;
-      width: 5rem;
+      margin-top: 1rem;
+      width: 6rem;
       opacity: 0;
       -webkit-touch-callout: none;
       cursor: pointer;
@@ -636,12 +666,15 @@ h4 {
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transition:
-      font-size .5s cubic-bezier(.77, .2, .05, .1),
-      height .5s cubic-bezier(.77, .2, .05, .1);
+      font-size .3s cubic-bezier(.77, .2, .05, .1),
+      height .5s cubic-bezier(.01, .2, .05, .1);
+
+    & a {
+      color: white;
+    }
   }
 
   .mobile-nav-toggle input:checked ~ ul {
-    /*transform: scale(1, 1);*/
     font-size: 3rem;
     height: 100vh;
     opacity: 1;
@@ -658,6 +691,8 @@ h4 {
 
     & div {
       padding: 0;
+      align-self: center;
+      margin: 0;
       margin-bottom: 1.5rem;
     }
   }
